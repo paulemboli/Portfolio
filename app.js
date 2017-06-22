@@ -16,7 +16,6 @@ pgClient.query("CREATE TABLE IF NOT EXISTS blog(id SERIAL UNIQUE PRIMARY KEY, ti
 app.set('view engine', 'ejs');
 
 app.get('/',(req ,res)=> {
-  console.log("check index")
   res.render('index');
 })
 app.get('/paule',(req ,res)=>{
