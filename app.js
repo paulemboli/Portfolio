@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 
 app.get('/',(req ,res)=> {
   console.log("check index")
-  res.render('index');
+  res.render('index.ejs');
 })
 app.get('/paule',(req ,res)=>{
   res.render('website.ejs');
