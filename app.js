@@ -15,7 +15,7 @@ pgClient.connect();
 pgClient.query("CREATE TABLE IF NOT EXISTS blog(id SERIAL UNIQUE PRIMARY KEY, title varchar(255) NOT NULL, body text NOT NULL)")
 app.set('view engine', 'ejs')
 app.get('/',(req ,res)=> {
-  res.render('index');
+  res.render('index.ejs');
 })
 app.get('/paule',(req ,res)=>{
   res.render('website.ejs');
