@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            <title></title>
+            <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    </head>
+    <body>
+    <audio id="audio1" src="bensound-buddy.mp3"></audio>
+    <button id="prevBtn" onclick="jukebox.prev()">Prev</button>
+    <button id="playBtn" onclick="jukebox.playIt()">Play</button>
+    <button id="stopBtn" onclick="jukebox.stopIt()">Stop</button>
+    <button id="nextBtn" onclick="jukebox.next()">Next</button>
+
+    <input id="newTrack" value="Input song URL"></input>
+    <button id="submitbtn" onclick="jukebox.addTrack()">Add Song</button>
+
+        <button id="spotifyBtn" onclick="jukebox.spotiSong()">Add Spotify Sample</button>
+
+    <span id="title"></span>
+    <ul li></ul>
+    <script type="text/javascript" src="functions.js"></script>
+    </body>
+</html>

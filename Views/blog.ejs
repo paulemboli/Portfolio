@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Blog</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/blog.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="blogApp.js" > </script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>Paule's Blog</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="paule">Home</a></li>
+        <!-- <li><a href="#section2">Friends</a></li> -->
+        <!-- <li><a href="#section3">photos</a></li> -->
+        <li><a href="Mygalleries">Photos</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Google.." id="search">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" onclick="searchGoogle()">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h1>
+        New post
+      </h1>
+      <form method="post"  id="new_post" class="new_post">
+        <div class="field">
+          <label for="post_title">Subject</label><br />
+          <input type="text" name="title" id="title" size="140">
+        </div>
+        <div class="field">
+          <label for="post_content">Write your comment here</label><br />
+          <textarea name="content" cols="138" rows="30" id="content">
+          </textarea>
+        </div>
+        <div class="actions">
+          <button type="button" onclick="sendPost()" class="btn btn-success">Submit Post</button>
+        </div>
+      </form>
+
+
+
+
+      <br><br>
+
+    <!-- If data is empty return null   -->
+<% if (data) {for(i=0;i<data.length;i++){ %>
+  <div class="well">
+    <strong>  <%= data[i].title %> </strong> <br><br>
+      <center> <%= data[i].body %> </center> <br><br>
+  </div>
+
+<%} }%>
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+
+</html>
