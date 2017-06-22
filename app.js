@@ -12,10 +12,12 @@ var pgClient = new pg.Client(connectionString);// new instant of Client
 pgClient.connect();
 
 //Tested it out if it is connected by creating a table
-pgClient.query("CREATE TABLE IF NOT EXISTS blog(id SERIAL UNIQUE PRIMARY KEY, title varchar(255) NOT NULL, body text NOT NULL)")
-app.set('view engine', 'ejs')
+pgClient.query("CREATE TABLE IF NOT EXISTS blog(id SERIAL UNIQUE PRIMARY KEY, title varchar(255) NOT NULL, body text NOT NULL)");
+app.set('view engine', 'ejs');
+
 app.get('/',(req ,res)=> {
-  res.render('website.ejs');
+  console.log("check index")
+  res.render('index');
 })
 app.get('/paule',(req ,res)=>{
   res.render('website.ejs');
