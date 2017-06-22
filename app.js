@@ -17,7 +17,7 @@ pgClient.connect();
 
 app.get('/',(req ,res)=> {
   console.log("check index")
-  res.render('website.ejs');
+  //res.render('index.ejs');
 })
 app.get('/paule',(req ,res)=>{
   res.render('website.ejs');
