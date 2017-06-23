@@ -8,8 +8,8 @@ app.use(parser.json());
 app.set('view engine', 'ejs');
 
 //postgres://postgres:1234567890@localhost:5432/bulletin
-var connectionString = "postgres://postgres:1234567890@localhost:5432/portfolio"
-// var connectionString = "postgres://wybkmycmhctnpn:42cdab1d0e895ea72b11bafbff840004d8c75f053608e0940b9c01eeec95a07c@ec2-23-23-111-171.compute-1.amazonaws.com:5432/d7nsq7k0pfaa3";
+//var connectionString = "postgres://postgres:1234567890@localhost:5432/portfolio"
+var connectionString = "postgres://wybkmycmhctnpn:42cdab1d0e895ea72b11bafbff840004d8c75f053608e0940b9c01eeec95a07c@ec2-23-23-111-171.compute-1.amazonaws.com:5432/d7nsq7k0pfaa3";
 var pgClient = new pg.Client(connectionString);// new instant of Client
 pgClient.connect();
 
@@ -60,8 +60,8 @@ app.post('/posts', function (req,res) {
   res.redirect(200,'/blog');
 })
 
-app.listen(8000, function(){
-console.log("Listening on port 8000")
-})
+// app.listen(8000, function(){
+// console.log("Listening on port 8000")
+// })
 
-//app.listen(process.env.PORT)
+app.listen(process.env.PORT)
