@@ -5,8 +5,8 @@ body{
 }
 
 .nav {
-	background-color: #333;
-	color: pink;
+	background-color:pink;
+	color: white;
 	list-style: none;
 	text-align: right;
 	padding: 20px 0 20px 0;
@@ -188,4 +188,8 @@ div.desc {
     content: "";
     display: table;
     clear: both;
+}
+
+#info{
+	margin:1px;
 }

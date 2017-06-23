@@ -23,4 +23,6 @@
     }
     .row.content {height: auto;}
   }
-  .
+  body{
+    background-color: lightblue;
+  }
